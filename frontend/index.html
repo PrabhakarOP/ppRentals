@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <title>Rent&Drive</title>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between items-center bg-black text-white h-16 px-[5%]">
+            <h1 class="text-2xl font-bold text-white">Rent&Drive</h1>
+            <div class="search-bar">
+                <i class="ri-search-2-line"></i>
+                <input type="text" placeholder="Search..." class="search-bar-input bg-transparent border-white px-2 py-1">
+            </div>
+            <ul class="flex gap-4">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <section class="hero-section bg-black text-white w-full overflow-hidden">
+            <div class="flex flex-col w-full aspect-[16/9] px-[5%] py-[10%] gap-4">
+                <h1 class="text-4xl font-bold"><span class="text-red-500">Mahindra XUV 700</span></h1>
+                <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-fit">Rent Now</button>
+            </div>
+        </section>
+
+        <section class="popular-cars bg-white text-black h-screen px-[5%]">
+            <h2 class="text-2xl font-bold">Popular Cars</h2>
+            <div class="flex flex-wrap gap-4 container">
+                <div class="car-card">
+                    <img src="images/car1.jpg" alt="Car 1" >
+                    <h3>Car 1</h3>
+                    <p>rupees 1000 /day</p>
+                    <button>Rent now</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer></footer>
+</body>
+</html>

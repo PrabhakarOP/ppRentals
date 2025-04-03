@@ -1,0 +1,23 @@
+{
+    "brands": [
+        "Maruti",
+        "Tata",
+        "Kia",
+        "Toyota",
+        "Hyundai",
+        "Mahindra",
+        "Honda",
+        "MG",
+        "Skoda",
+        "Jeep",
+        "Renault",
+        "Nissan" 
+    ],
+    "cars": [
+        {
+            "brand": "Maruti",
+            "model": "Swift",
+            "image": "maruti-swift.jpg"
+        }
+    ]
+}
