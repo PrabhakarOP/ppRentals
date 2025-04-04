@@ -1,0 +1,27 @@
+.filter-group-content {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.filter-group-content.collapsed {
+    max-height: 0;
+}
+
+.filters-section-content {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.filters-section-content.collapsed {
+    max-height: 0;
+}
+
+.rotate-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate-icon.rotated {
+    transform: rotate(180deg);
+}
