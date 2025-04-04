@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/styles.css">
     <title>Rent&Drive</title>
 </head>
-<body class="bg-[#373737]">
+<body class="bg-black">
     <header>
         <nav class="flex justify-between items-center bg-black text-white h-16 px-[5%]">
             <h1 class="text-2xl font-bold text-white">Rent&Drive</h1>
@@ -43,29 +43,43 @@
             </div>
         </section>
 
-        <section class="popular-cars bg-black text-white px-[5%] my-[10px] mx-[10px] rounded-md">
-            <h2 class="text-2xl font-bold">Popular Cars</h2>
+        <section class="popular-cars bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
+            <h2 class="text-2xl font-bold mb-4">Popular Cars</h2>
             <nav class="flex justify-between items-center">
-                <ul class="flex gap-4">
-                    <li>SUV</li>
+                <ul class="flex gap-4 cursor-pointer">
+                    <li class="border-b-4 border-b-red-500">SUV</li>
                     <li>SEDAN</li>
                     <li>HATCHBACK</li>
                     <li>MUV</li>
                     <li>Luxury</li>
                 </ul>
             </nav>
-            <hr class="border-white">
-            <div class="flex flex-wrap gap-4 container">
-                <div class="car-card">
-                    <img src="images/car1.jpg" alt="Car 1" >
-                    <h3>Car 1</h3>
-                    <p>rupees 1000 /day</p>
-                    <button>Rent now</button>
+            <hr class="border-white mb-4">
+            <div class="container flex flex-wrap gap-4 justify-between">
+                <div class="car-card w-[30vw] max-w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Mahindra XUV 700</h3>
+                        <p class="text-gray-600 mb-4">Rent-1000 Rs/day</p>
+                        <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-full">
+                            Rent now
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- <section class="testimonials bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
+            <h2 class="text-2xl font-bold mb-4">Testimonials</h2>
+            <div class="container flex flex-wrap gap-4 justify-between">
+                <div class="testimonial-card w-[30vw] max-w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover">
+                </div>
+            </div>
+        </section> -->
     </main>
     <footer></footer>
 </body>
 </html>
+
+
