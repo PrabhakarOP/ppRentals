@@ -43,9 +43,9 @@
             });
         }
 
-        // Auto-play
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateCarousel();
-        }, 5000); // Change slide every 5 seconds
+        // // Auto-play
+        // setInterval(() => {
+        //     currentSlide = (currentSlide + 1) % slides.length;
+        //     updateCarousel();
+        // }, 5000); // Change slide every 5 seconds
     });
