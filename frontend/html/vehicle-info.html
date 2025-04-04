@@ -12,13 +12,13 @@
 <body class="bg-black">
     <!-- Header Section -->
     <header>
-        <nav class="flex justify-between items-center bg-black text-white h-16 px-[5%]">
-            <h1 class="text-2xl font-bold text-white">Rent&Drive</h1>
-            <div class="search-bar">
+        <nav class="flex flex-col md:flex-row justify-between items-center bg-black text-white h-auto md:h-16 px-[5%] py-4 md:py-0">
+            <h1 class="text-2xl font-bold text-white mb-4 md:mb-0">Rent&Drive</h1>
+            <div class="search-bar w-full md:w-auto mb-4 md:mb-0">
                 <i class="ri-search-2-line"></i>
-                <input type="text" placeholder="Search..." class="search-bar-input bg-transparent border-white px-2 py-1">
+                <input type="text" placeholder="Search..." class="search-bar-input bg-transparent border-white px-2 py-1 w-full md:w-auto">
             </div>
-            <ul class="flex gap-4">
+            <ul class="flex gap-4 w-full md:w-auto justify-center md:justify-end">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -40,30 +40,30 @@
             </div>
 
             <!-- Navigation Arrows -->
-            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 transition-all" id="prevBtn">
-                <i class="ri-arrow-left-line text-2xl"></i>
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 sm:p-3 md:p-4 transition-all" id="prevBtn">
+                <i class="ri-arrow-left-line text-xl sm:text-2xl"></i>
             </button>
-            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 transition-all" id="nextBtn">
-                <i class="ri-arrow-right-line text-2xl"></i>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 sm:p-3 md:p-4 transition-all" id="nextBtn">
+                <i class="ri-arrow-right-line text-xl sm:text-2xl"></i>
             </button>
 
             <!-- Dots Navigation -->
-            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="dotsContainer">
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+            <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2" id="dotsContainer">
+                <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
             </div>
         </div>
         
-        <div class="pricing-section bg-[#373737] text-white px-[5%] py-6 my-[10px] mx-[10px] rounded-md">
-            <div class="flex justify-between items-center">
-                <div class="price-details">
-                    <h2 class="text-2xl font-bold text-red-500 mb-2">Rental Price</h2>
-                    <p class="text-3xl font-bold">₹<span class="price-value">2,500</span> <span class="text-lg text-gray-400">/ day</span></p>
+        <div class="pricing-section bg-[#373737] text-white px-[5%] py-4 sm:py-6 my-[10px] mx-[10px] rounded-md">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+                <div class="price-details text-center sm:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold text-red-500 mb-2">Rental Price</h2>
+                    <p class="text-2xl sm:text-3xl font-bold">₹<span class="price-value">2,500</span> <span class="text-base sm:text-lg text-gray-400">/ day</span></p>
                 </div>
-                <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 flex items-center gap-2">
+                <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-md transition-colors duration-300 flex items-center gap-2 w-full sm:w-auto">
                     <i class="ri-car-line"></i>
                     Rent Now
                 </button>
@@ -71,113 +71,113 @@
         </div>
 
         <div class="specs-container">
-        <h1 class="text-white text-4xl font-bold text-center mt-4 border-b-2 border-red-500 w-fit mx-auto"><span>MAHINDRA XUV 700</span> SPECIFICATIONS</h1>
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-4 border-b-2 border-red-500 w-fit mx-auto px-4"><span>MAHINDRA XUV 700</span> SPECIFICATIONS</h1>
         <section class="engine-and-transmission bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
-           <h2 class="text-2xl font-bold mb-4 text-red-500">Engine & Transmission</h2>
-           <div class="specs-container flex flex-col gap-4">
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Type</h3>
-                <p class="text-black text-lg font-semibold">Diesel</p>
+           <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-500">Engine & Transmission</h2>
+           <div class="specs-container flex flex-col gap-3 sm:gap-4">
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Type</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">Diesel</p>
             </div>
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Displacement</h3>
-                <p class="text-black text-lg font-semibold">2198</p>
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Displacement</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">2198</p>
             </div>
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Maximum Power with Unit</h3>
-                <p class="text-black text-lg font-semibold">152.87 kW @3750rpm</p>
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Maximum Power with Unit</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">152.87 kW @3750rpm</p>
             </div>
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Maximum Torque with Unit</h3>
-                <p class="text-black text-lg font-semibold">360 Nm @1500-2800rpm</p>
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Maximum Torque with Unit</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">360 Nm @1500-2800rpm</p>
             </div>
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Gear Box</h3>
-                <p class="text-black text-lg font-semibold">6-Speed Manual</p>
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Gear Box</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">6-Speed Manual</p>
             </div>
-            <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                <h3 class="text-xl text-gray-400">Drive Type</h3>
-                <p class="text-black text-lg font-semibold">4WD</p>
+            <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                <h3 class="text-lg sm:text-xl text-gray-400">Drive Type</h3>
+                <p class="text-black text-base sm:text-lg font-semibold">4WD</p>
             </div>
            </div>
         </section>
         <section class="capacity bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
-            <h2 class="text-2xl font-bold mb-4 text-red-500">Capacity</h2>
-            <div class="specs-container flex flex-col gap-4">
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Seating Capacity</h3>
-                    <p class="text-black text-lg font-semibold">5</p>
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-500">Capacity</h2>
+            <div class="specs-container flex flex-col gap-3 sm:gap-4">
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Seating Capacity</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">5</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Cargo Volume</h3>
-                    <p class="text-black text-lg font-semibold">-</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Cargo Volume</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">-</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Fuel Tank Capacity</h3>
-                    <p class="text-black text-lg font-semibold">60L</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Fuel Tank Capacity</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">60L</p>
                 </div>
             </div>
         </section>
         <section class="breaks bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
-            <h2 class="text-2xl font-bold mb-4 text-red-500">Breaks</h2>
-            <div class="specs-container flex flex-col gap-4">
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Front Brakes</h3>
-                    <p class="text-black text-lg font-semibold">Disc</p>
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-500">Breaks</h2>
+            <div class="specs-container flex flex-col gap-3 sm:gap-4">
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Front Brakes</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">Disc</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Rear Brakes</h3>
-                    <p class="text-black text-lg font-semibold">Disc</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Rear Brakes</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">Disc</p>
                 </div>
             </div>
         </section>
         <section class="suspension-tyres-and-turning-circle bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
-            <h2 class="text-2xl font-bold mb-4 text-red-500">Suspension, Tyres & Turning Circle</h2>
-            <div class="specs-container flex flex-col gap-4">
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Front Suspension</h3>
-                    <p class="text-black text-lg font-semibold">McPherson Strut Independent Suspension with FSD and Stabilizer bar</p>
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-500">Suspension, Tyres & Turning Circle</h2>
+            <div class="specs-container flex flex-col gap-3 sm:gap-4">
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Front Suspension</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">McPherson Strut Independent Suspension with FSD and Stabilizer bar</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Rear Suspension</h3>
-                    <p class="text-black text-lg font-semibold">Multi-Link</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Rear Suspension</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">Multi-Link</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Tyres</h3>
-                    <p class="text-black text-lg font-semibold">265/60 R18</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Tyres</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">265/60 R18</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Turning Circle</h3>
-                    <p class="text-black text-lg font-semibold">11.2m</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Turning Circle</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">11.2m</p>
                 </div>
-                
+            </div>
         </section>
         <section class="dimensions bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
-            <h2 class="text-2xl font-bold mb-4 text-red-500">Dimensions</h2>
-            <div class="specs-container flex flex-col gap-4">
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Length</h3>
-                    <p class="text-black text-lg font-semibold">4715mm</p>
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-500">Dimensions</h2>
+            <div class="specs-container flex flex-col gap-3 sm:gap-4">
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Length</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">4715mm</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Width</h3>
-                    <p class="text-black text-lg font-semibold">1930mm</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Width</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">1930mm</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Height</h3>
-                    <p class="text-black text-lg font-semibold">1845mm</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Height</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">1845mm</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Wheelbase</h3>
-                    <p class="text-black text-lg font-semibold">2850mm</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Wheelbase</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">2850mm</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Front Tread</h3>
-                    <p class="text-black text-lg font-semibold">210mm</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Front Tread</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">210mm</p>
                 </div>
-                <div class="specs-card flex justify-between items-center border-b-1 border-b-white p-1">
-                    <h3 class="text-xl text-gray-400">Rear Tread</h3>
-                    <p class="text-black text-lg font-semibold">210mm</p>
+                <div class="specs-card flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-1 border-b-white p-1 gap-1 sm:gap-0">
+                    <h3 class="text-lg sm:text-xl text-gray-400">Rear Tread</h3>
+                    <p class="text-black text-base sm:text-lg font-semibold">210mm</p>
                 </div>
             </div>
         </section>
@@ -186,17 +186,17 @@
 
     <!-- Footer Section -->
     <footer class="bg-black text-white px-[5%] py-4 border-t-2 border-red-500 mt-10">
-        <div class="container flex flex-wrap gap-4">
-            <div class="footer-section w-[25vw]">
+        <div class="container flex flex-col md:flex-row flex-wrap gap-8 md:gap-4">
+            <div class="footer-section w-full md:w-[25vw]">
                 <h3 class="text-xl font-semibold mb-2">About Us</h3>
                 <p class="text-gray-600 mb-4">Rent&Drive is a car rental company that provides a wide range of cars for rent.</p>
             </div>
-            <div class="footer-section w-[25vw]">
+            <div class="footer-section w-full md:w-[25vw]">
                 <h3 class="text-xl font-semibold mb-2">Contact Us</h3>
                 <p class="text-gray-600 mb-4">Email: rentdrive@gmail.com</p>
                 <p class="text-gray-600 mb-4">Phone: +91 9876543210</p>
             </div>
-            <div class="footer-section w-[25vw]">
+            <div class="footer-section w-full md:w-[25vw]">
                 <h3 class="text-xl font-semibold mb-2">Follow Us</h3>
                 <ul class="flex gap-4">
                     <li><a href="#">Facebook</a></li>
@@ -205,7 +205,7 @@
                 </ul>
             </div>
         </div>
-        <div class="copyright mt-4">
+        <div class="copyright mt-4 text-center md:text-left">
             <p class="text-sm">
                 &copy; 2024 Rent&Drive. All rights reserved.
                 <span class="mx-2">|</span>
