@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/vehicle-info-carousel.css">
     <title>Vehicle Info - Rent&Drive</title>
 </head>
 <body class="bg-black">
@@ -26,7 +27,37 @@
     </header>
 
     <main>
+        <div class="vehicle-hero-section relative w-full aspect-[12/7] max-h-[calc(100vh-4rem)]">
+            <!-- Carousel Container -->
+            <div class="carousel-container w-full h-full overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-300" id="carouselTrack">
+                    <img src="../assets/carsData/cars/SUV/Mahindra/XUV-700/xuv-700-front.jpg" alt="Vehicle Hero" class="w-full h-full object-cover flex-shrink-0 slide">
+                    <img src="../assets/carsData/cars/SUV/Mahindra/XUV-700/xuv-700-front.jpg" alt="Vehicle Hero" class="w-full h-full object-cover flex-shrink-0 slide">
+                    <img src="../assets/carsData/cars/SUV/Mahindra/XUV-700/xuv-700-front.jpg" alt="Vehicle Hero" class="w-full h-full object-cover flex-shrink-0 slide">
+                    <img src="../assets/carsData/cars/SUV/Mahindra/XUV-700/xuv-700-front.jpg" alt="Vehicle Hero" class="w-full h-full object-cover flex-shrink-0 slide">
+                    <img src="../assets/carsData/cars/SUV/Mahindra/XUV-700/xuv-700-front.jpg" alt="Vehicle Hero" class="w-full h-full object-cover flex-shrink-0 slide">
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 transition-all" id="prevBtn">
+                <i class="ri-arrow-left-line text-2xl"></i>
+            </button>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 transition-all" id="nextBtn">
+                <i class="ri-arrow-right-line text-2xl"></i>
+            </button>
+
+            <!-- Dots Navigation -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="dotsContainer">
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot"></button>
+            </div>
+        </div>
         
+        <div class="specs-container">
         <h1 class="text-white text-4xl font-bold text-center mt-4 border-b-2 border-red-500"><span>MAHINDRA XUV 700</span> SPECIFICATIONS</h1>
         <section class="engine-and-transmission bg-[#373737] text-white px-[5%] py-4 my-[10px] mx-[10px] rounded-md">
            <h2 class="text-2xl font-bold mb-4 text-red-500">Engine & Transmission</h2>
@@ -137,6 +168,7 @@
                 </div>
             </div>
         </section>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -171,4 +203,6 @@
         </div>
     </footer>
 </body>
+
+<script src="../script/vehicle-info-carousel.js"></script>
 </html>
