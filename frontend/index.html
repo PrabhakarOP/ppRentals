@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/styles.css">
     <title>Rent&Drive</title>
 </head>
-<body>
+<body class="bg-[#373737]">
     <header>
         <nav class="flex justify-between items-center bg-black text-white h-16 px-[5%]">
             <h1 class="text-2xl font-bold text-white">Rent&Drive</h1>
@@ -24,15 +24,37 @@
         </nav>  
     </header>
     <main>
-        <section class="hero-section bg-black text-white w-full overflow-hidden">
-            <div class="flex flex-col w-full aspect-[16/9] px-[5%] py-[10%] gap-4">
-                <h1 class="text-4xl font-bold"><span class="text-red-500">Mahindra XUV 700</span></h1>
-                <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-fit">Rent Now</button>
+        <section class="hero-section bg-black text-white overflow-hidden relative ">
+            <div class="flex flex-col w-full aspect-[16/9] gap-6 py-16 px-[5%]">
+                <h1 class="text-5xl md:text-6xl font-bold text-red-500">
+                    Mahindra XUV 700
+                </h1>
+                <p class="text-xl max-w-2xl">
+                    Luxury meets performance in this premium SUV.<br> Available for rent today.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-8 py-3 rounded-md">
+                        Rent Now
+                    </button>
+                    <button class="border-2 border-white hover:bg-white hover:text-black transition px-8 py-3 rounded-md">
+                        Learn More
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section class="popular-cars bg-white text-black h-screen px-[5%]">
+        <section class="popular-cars bg-black text-white px-[5%] my-[10px] mx-[10px] rounded-md">
             <h2 class="text-2xl font-bold">Popular Cars</h2>
+            <nav class="flex justify-between items-center">
+                <ul class="flex gap-4">
+                    <li>SUV</li>
+                    <li>SEDAN</li>
+                    <li>HATCHBACK</li>
+                    <li>MUV</li>
+                    <li>Luxury</li>
+                </ul>
+            </nav>
+            <hr class="border-white">
             <div class="flex flex-wrap gap-4 container">
                 <div class="car-card">
                     <img src="images/car1.jpg" alt="Car 1" >
