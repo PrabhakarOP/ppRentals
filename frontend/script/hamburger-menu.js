@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const searchBar = document.getElementById('search-bar');
@@ -15,4 +15,4 @@
                     icon.className = 'ri-close-line';
                 }
             });
-        // });
+        });
