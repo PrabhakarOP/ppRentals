@@ -1,35 +1,20 @@
-package com.prabhakar.rentanddrive.model;
+package com.prabhakar.rentanddrive.model.request.car;
 
 import com.prabhakar.rentanddrive.model.embeddable.Specifications;
 import com.prabhakar.rentanddrive.model.enums.BodyType;
 import com.prabhakar.rentanddrive.model.enums.FuelType;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Document(collection = "cars")
-public class Car {
-    private String id;
-    private String brand;
-    private String model;
-    private String year;
-    private String photoUrl;
-    private BodyType bodyType;
-    private FuelType fuelType;
-    private String Transmission;
-    private double pricePerDay;
-    private String[] imagesUrl;
-    private Specifications specs;
-    private boolean isAvailable;
-    private float rating;
-    private int reviewCount;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+public class UpdateCarRequest {
+    String brand;
+    String model;
+    String year;
+    String photoUrl;
+    BodyType bodyType;
+    FuelType fuelType;
+    String Transmission;
+    double pricePerDay;
+    String[] imagesUrl;
+    Specifications specs;
 
     public String getBrand() {
         return brand;
@@ -109,29 +94,5 @@ public class Car {
 
     public void setSpecs(Specifications specs) {
         this.specs = specs;
-    }
-
-    public boolean isAvailable() {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
-
-    public float getRating() {
-        return rating;
-    }
-
-    public void setRating(float rating) {
-        this.rating = rating;
-    }
-
-    public int getReviewCount() {
-        return reviewCount;
-    }
-
-    public void setReviewCount(int reviewCount) {
-        this.reviewCount = reviewCount;
     }
 }
