@@ -9,6 +9,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ApiResponse<Object> handleGenericException(Exception e) {
         CustomError error=new CustomError("Something went wrong", "500");
+        System.out.println(e.getMessage());
         return new ApiResponse<>(null, false, true, error);
     }
 
