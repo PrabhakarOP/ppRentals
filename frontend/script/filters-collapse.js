@@ -1,5 +1,3 @@
-
-        // document.addEventListener('DOMContentLoaded', function() {
             // Toggle for the entire filters section
             const toggleFiltersBtn = document.getElementById('toggle-filters');
             const filtersSectionContent = document.querySelector('.filters-section-content');
@@ -21,4 +19,4 @@
                     this.querySelector('i').classList.toggle('rotated');
                 });
             });
-        // });
+            
