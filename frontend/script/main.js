@@ -11,6 +11,9 @@ let popularCars={
     "muv":[]
 }
 
+//brand data
+let popularBrands=[];
+
 async function fetchPopularCars() {
     //for suv
     try {
@@ -136,7 +139,30 @@ async function fetchPopularCars() {
     }
 }
 
+async function fetchPopularBrands(){
+    console.log("Fetching popular brands");
+    try{
+        const respone=await fetch(`${baseUrl}brand/all?page=0&size=10`);
+        if(!respone.ok){
+            throw new Error('Network response was not ok');
+        }
+        const data=await respone.json();
+        //check data
+        if(data.failure){
+            throw new Error('Data fetch failed');
+        }
+
+        popularBrands=data.content.content;
+        renderPopularBrands(popularBrands);
+        console.log("Popular Brands:")
+        console.log(popularBrands);
+    }catch(error){
+        console.error('Error fetching car data:', error);
+    }
+}
+
  fetchPopularCars();
+ fetchPopularBrands();
 
 
 function renderPopularCars(cars) {
@@ -151,6 +177,16 @@ function renderPopularCars(cars) {
     cars.forEach(car => {
         const carCard = new PopularCarCard(car);
         popularCarsContainer.innerHTML += carCard.render();
+    });
+}
+
+function renderPopularBrands(brands) {
+    console.log("Rendering popular brands");
+    const popularBrandsContainer = document.getElementById('popular-brands-carousel');
+    popularBrandsContainer.innerHTML = ''; // Clear existing content
+    brands.forEach(brand => {
+        const brandCard = new PopularBrandCard(brand);
+        popularBrandsContainer.innerHTML += brandCard.render();
     });
 }
 
