@@ -111,6 +111,7 @@ async function fetchPopularCars() {
         }
 
         popularCars.electric=data.content.content;
+        renderElectricCars(popularCars.electric);
         console.log("Electric Cars:")
         console.log(popularCars.electric);
         
@@ -187,6 +188,16 @@ function renderPopularBrands(brands) {
     brands.forEach(brand => {
         const brandCard = new PopularBrandCard(brand);
         popularBrandsContainer.innerHTML += brandCard.render();
+    });
+}
+
+function renderElectricCars(cars) {
+    console.log("Rendering electric cars:");
+    const electricCarsContainer = document.getElementById('electric-cars-carousel');
+    electricCarsContainer.innerHTML = ''; // Clear existing content
+    cars.forEach(car => {
+        const carCard = new PopularCarCard(car);
+        electricCarsContainer.innerHTML += carCard.render();
     });
 }
 
