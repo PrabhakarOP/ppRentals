@@ -1,6 +1,6 @@
 
     // document.addEventListener('DOMContentLoaded', function() {
-        const track = document.getElementById('carouselTrack');
+        const track = document.getElementById('carousel-track');
         const slides = track.getElementsByClassName('slide');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');

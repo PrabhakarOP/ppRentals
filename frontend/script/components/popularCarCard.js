@@ -6,11 +6,11 @@ class PopularCarCard {
     render() {
         return `
             <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
-                <a href="html/vehicle-info.html">
+                <a href="html/vehicle-info.html?id=${this.car.id}">
                     <img src="${this.car.photoUrl}" alt="${this.car.brand + ' ' + this.car.model}" class="w-full aspect-square object-cover">
                 </a>
                 <div class="p-4">
-                    <a href="html/vehicle-info.html">
+                    <a href="html/vehicle-info.html?id=${this.car.id}">
                         <h3 class="text-xl font-semibold mb-2">${this.car.brand + ' ' + this.car.model}</h3>
                     </a>
                     <p class="text-gray-600 mb-4">Rent-${this.car.pricePerDay} Rs/day</p>
