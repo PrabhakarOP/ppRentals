@@ -37,6 +37,7 @@ public class CarServiceImpl implements CarService {
         car.setBodyType(addCarRequest.getBodyType());
         car.setFuelType(addCarRequest.getFuelType());
         car.setTransmission(addCarRequest.getTransmission());
+        car.setPricePerDay(addCarRequest.getPricePerDay());
         car.setImagesUrl(addCarRequest.getImagesUrl());
         car.setSpecs(addCarRequest.getSpecs());
         car.setAvailable(true); // Default to available when added

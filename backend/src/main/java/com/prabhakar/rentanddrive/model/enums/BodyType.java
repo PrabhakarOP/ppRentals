@@ -1,5 +1,5 @@
 package com.prabhakar.rentanddrive.model.enums;
 
 public enum BodyType {
-    SUV,Hatchback,MUV,Sedan,Luxury;
+    SUV,Hatchback,MUV,Sedan,Luxury,Van,Electric;
 }
