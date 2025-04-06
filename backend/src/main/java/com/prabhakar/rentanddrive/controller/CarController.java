@@ -35,6 +35,12 @@ public class CarController {
         return carService.getAllCars(page, size);
     }
 
+    @GetMapping("/bodytype")
+    public Page<Car> getCarsByBodyType(@RequestParam String bodyType ,@RequestParam int page ,@RequestParam int size){
+        return carService.getCarsByBodyType(bodyType,page,size);
+    }
+
+
     @PutMapping("/id")
     public Car updateCar(@RequestParam String id, @RequestBody UpdateCarRequest updateCarRequest) {
         return carService.updateCar(id, updateCarRequest);
