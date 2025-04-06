@@ -1,6 +1,7 @@
 package com.prabhakar.rentanddrive.controller;
 
 import com.prabhakar.rentanddrive.model.Car;
+import com.prabhakar.rentanddrive.model.base.ApiResponse;
 import com.prabhakar.rentanddrive.model.request.car.AddCarRequest;
 import com.prabhakar.rentanddrive.model.request.car.UpdateCarRequest;
 import com.prabhakar.rentanddrive.service.CarService;
@@ -16,34 +17,40 @@ public class CarController {
     private CarService carService;
 
     @PostMapping
-    public Car addCar(@RequestBody AddCarRequest addCarRequest) {
-        return carService.add(addCarRequest);
+    public ApiResponse<Car> addCar(@RequestBody AddCarRequest addCarRequest) {
+        Car car= carService.add(addCarRequest);
+        return new ApiResponse<>(car,true,false,null);
     }
 
     @GetMapping("/id")
-    public Car getCarById(@RequestParam String id) {
-        return carService.getCarById(id);
+    public ApiResponse<Car> getCarById(@RequestParam String id) {
+        Car car= carService.getCarById(id);
+        return new ApiResponse<>(car,true,false,null);
     }
 
     @GetMapping("/model")
-    public Car getCarByModel(@RequestParam String model) {
-        return carService.getCarByModel(model);
+    public ApiResponse<Car> getCarByModel(@RequestParam String model) {
+        Car car= carService.getCarByModel(model);
+        return new ApiResponse<>(car,true,false,null);
     }
 
     @GetMapping
-    public Page<Car> getAllCars(@RequestParam int page, @RequestParam int size) {
-        return carService.getAllCars(page, size);
+    public ApiResponse<Page<Car>> getAllCars(@RequestParam int page, @RequestParam int size) {
+        Page<Car>  carPage=carService.getAllCars(page, size);
+        return new ApiResponse<>(carPage,true,false,null);
     }
 
     @GetMapping("/bodytype")
-    public Page<Car> getCarsByBodyType(@RequestParam String bodyType ,@RequestParam int page ,@RequestParam int size){
-        return carService.getCarsByBodyType(bodyType,page,size);
+    public ApiResponse<Page<Car>> getCarsByBodyType(@RequestParam String bodyType ,@RequestParam int page ,@RequestParam int size){
+        Page<Car> carPage= carService.getCarsByBodyType(bodyType,page,size);
+        return new ApiResponse<>(carPage,true,false,null);
     }
 
 
     @PutMapping("/id")
-    public Car updateCar(@RequestParam String id, @RequestBody UpdateCarRequest updateCarRequest) {
-        return carService.updateCar(id, updateCarRequest);
+    public ApiResponse<Car> updateCar(@RequestParam String id, @RequestBody UpdateCarRequest updateCarRequest) {
+        Car car= carService.updateCar(id, updateCarRequest);
+        return new ApiResponse<>(car,true,false,null);
     }
 
     @DeleteMapping("/id")
