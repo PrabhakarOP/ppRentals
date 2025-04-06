@@ -59,56 +59,16 @@
             <h2 class="text-2xl font-bold mb-4">Popular Cars</h2>
             <nav class="flex justify-between items-center overflow-x-auto">
                 <ul class="flex gap-4 cursor-pointer whitespace-nowrap">
-                    <li class="border-b-4 border-b-red-500">SUV</li>
-                    <li>SEDAN</li>
-                    <li>HATCHBACK</li>
-                    <li>MUV</li>
-                    <li>Luxury</li>
+                    <li body-type="suv" class="border-b-4 border-b-red-500">SUV</li>
+                    <li body-type="sedan">SEDAN</li>
+                    <li body-type="hatchback">HATCHBACK</li>
+                    <li body-type="muv">MUV</li>
+                    <li body-type="luxury">Luxury</li>
                 </ul>
             </nav>
             <hr class="border-white mb-4">
-            <div class="carousel-container overflow-x-auto pb-4">
-                <div class="flex gap-4 w-max">
-                    <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
-                        <a href="html/vehicle-info.html"><img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover"></a>
-                        <div class="p-4">
-                            <a href="html/vehicle-info.html"><h3 class="text-xl font-semibold mb-2">Mahindra XUV 700</h3></a>
-                            <p class="text-gray-600 mb-4">Rent-1000 Rs/day</p>
-                            <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-full">
-                                Rent now
-                            </button>
-                        </div>
-                    </div>
-                    <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
-                        <a href="html/vehicle-info.html"><img src="/assets/carsData/cars/SUV/Mahindra/Scorpio-N/square.jpeg" alt="Car 1" class="w-full aspect-square object-cover"></a>
-                        <div class="p-4">
-                            <a href="html/vehicle-info.html"><h3 class="text-xl font-semibold mb-2">Mahindra Scorpio N</h3></a>
-                            <p class="text-gray-600 mb-4">Rent-1000 Rs/day</p>
-                            <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-full">
-                                Rent now
-                            </button>
-                        </div>
-                    </div>
-                    <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
-                        <a href="html/vehicle-info.html"><img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover"></a>
-                        <div class="p-4">
-                            <a href="html/vehicle-info.html"><h3 class="text-xl font-semibold mb-2">Mahindra XUV 700</h3></a>
-                            <p class="text-gray-600 mb-4">Rent-1000 Rs/day</p>
-                            <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-full">
-                                Rent now
-                            </button>
-                        </div>
-                    </div>
-                    <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
-                        <a href="html/vehicle-info.html"><img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover"></a>
-                        <div class="p-4">
-                            <a href="html/vehicle-info.html"><h3 class="text-xl font-semibold mb-2">Mahindra XUV 700</h3></a>
-                            <p class="text-gray-600 mb-4">Rent-1000 Rs/day</p>
-                            <button class="bg-red-500 text-white hover:bg-red-600 font-bold px-4 py-2 rounded-md w-full">
-                                Rent now
-                            </button>
-                        </div>
-                    </div>
+            <div class="carousel-container overflow-x-auto pb-4" >
+                <div class="flex gap-4 w-max" id="popular-cars-carousel">
                     <div class="car-card w-[280px] sm:w-[300px] bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-red-500">
                         <a href="html/vehicle-info.html"><img src="./assets/cars/SUV/Mahindra/XUV-700/xuv-700-square.jpg" alt="Car 1" class="w-full aspect-square object-cover"></a>
                         <div class="p-4">
@@ -234,6 +194,7 @@
         </div>
     </footer>
     <script src="script/hamburger-menu.js"></script>
+    <script src="script/components/popularCarCard.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>
