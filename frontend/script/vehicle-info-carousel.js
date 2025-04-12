@@ -1,5 +1,3 @@
-
-    // document.addEventListener('DOMContentLoaded', function() {
         const track = document.getElementById('carousel-track');
         const slides = track.getElementsByClassName('slide');
         const prevBtn = document.getElementById('prevBtn');
@@ -43,9 +41,3 @@
             });
         }
 
-        // // Auto-play
-        // setInterval(() => {
-        //     currentSlide = (currentSlide + 1) % slides.length;
-        //     updateCarousel();
-        // }, 5000); // Change slide every 5 seconds
-    // });
