@@ -13,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -94,5 +95,10 @@ public class CarServiceImpl implements CarService {
             throw new ResourceNotFoundException("No Cars fot the body type available");
         }
         return carPage;
+    }
+
+    @Override
+    public List<Car> searchCars(String query) {
+        return carRepository.findByModelContainingIgnoreCaseOrBrandContainingIgnoreCase(query, query);
     }
 }

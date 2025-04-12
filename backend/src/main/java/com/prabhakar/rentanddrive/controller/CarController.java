@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1/car")
 public class CarController {
@@ -44,6 +46,12 @@ public class CarController {
     public ApiResponse<Page<Car>> getCarsByBodyType(@RequestParam String bodyType ,@RequestParam int page ,@RequestParam int size){
         Page<Car> carPage= carService.getCarsByBodyType(bodyType,page,size);
         return new ApiResponse<>(carPage,true,false,null);
+    }
+
+    @GetMapping("/search")
+    public ApiResponse<List<Car>> searchCars(@RequestParam String query) {
+        List<Car> cars = carService.searchCars(query);
+        return new ApiResponse<>(cars, true, false, null);
     }
 
 

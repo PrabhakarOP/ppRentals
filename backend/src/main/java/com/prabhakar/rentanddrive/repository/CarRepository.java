@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -15,4 +16,6 @@ public interface CarRepository extends MongoRepository<Car,String> {
     Optional<Car> findById(String id);
 
     Page<Car> findByBodyType(String bodyType, Pageable pageable);
+
+    List<Car> findByModelContainingIgnoreCaseOrBrandContainingIgnoreCase(String query, String query1);
 }

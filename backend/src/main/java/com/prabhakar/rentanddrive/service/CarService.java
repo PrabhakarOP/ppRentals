@@ -5,6 +5,8 @@ import com.prabhakar.rentanddrive.model.request.car.AddCarRequest;
 import com.prabhakar.rentanddrive.model.request.car.UpdateCarRequest;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 public interface CarService {
     Car add(AddCarRequest addCarRequest);
     Car getCarByModel(String model);
@@ -14,4 +16,6 @@ public interface CarService {
     void deleteCarById(String id);
 
     Page<Car> getCarsByBodyType(String bodyType, int page, int size);
+
+    List<Car> searchCars(String query);
 }
