@@ -1,6 +1,5 @@
 package com.prabhakar.rentanddrive.service.impl;
 
-import com.prabhakar.rentanddrive.exception.PasswordMismatchException;
 import com.prabhakar.rentanddrive.exception.ResourceAlreadyExistExeption;
 import com.prabhakar.rentanddrive.exception.ResourceNotFoundException;
 import com.prabhakar.rentanddrive.model.User;
@@ -66,17 +65,6 @@ public class UserServiceImpl implements UserService {
         }
         else{
             throw new ResourceNotFoundException("User not found with id: " + id);
-        }
-    }
-
-    @Override
-    public User login(String email, String password) {
-        User user=userRepository.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException("User not found with email: " + email));
-        if(user.getPassword().equals(password)){
-            return user;
-        }
-        else{
-            throw new PasswordMismatchException("Password does not match");
         }
     }
 }

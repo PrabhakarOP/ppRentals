@@ -24,10 +24,4 @@ public class GlobalExceptionHandler {
         CustomError error=new CustomError(e.getMessage(), "409");
         return new ApiResponse<>(null, false, true, error);
     }
-
-    @ExceptionHandler(PasswordMismatchException.class)
-    public ApiResponse<Object> handlePasswordMismatchException(PasswordMismatchException e) {
-        CustomError error=new CustomError(e.getMessage(), "410");
-        return new ApiResponse<>(null, false, true, error);
-    }
 }

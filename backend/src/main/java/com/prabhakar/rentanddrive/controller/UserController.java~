@@ -43,11 +43,6 @@ public class UserController {
         return new ApiResponse<>(userService.getAllUsersByName(name, page, size),true,false,null);
     }
 
-    @GetMapping("/login")
-    public ApiResponse<User> login(@RequestParam String email, @RequestParam String password) {
-        return new ApiResponse<>(userService.login(email, password),true,false,null);
-    }
-
     @PutMapping
     public ApiResponse<User> updateUser(@RequestBody User updatedUser) {
         return new ApiResponse<>(userService.updateUser(updatedUser),true,false,null);

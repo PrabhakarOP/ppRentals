@@ -12,4 +12,6 @@ public interface UserService {
     Page<User> getAllUsersByName(String name, int page, int size);
     User updateUser(User updatedUser);
     void deleteUserById(String id);
+
+    User login(String email, String password);
 }
