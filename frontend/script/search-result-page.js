@@ -3,6 +3,7 @@ const baseUrl='https://imperial-nerti-prabhakar-06383824.koyeb.app/api/v1/';
 const carContainer=document.getElementById('car-cards-container');
 
 let page=0; let pageSize=6; let totalPages; let searchTerm;
+let currentPage=1;
 
 // async function searchCars(page, pageSize, searchTerm) {
 //     try {
@@ -67,11 +68,14 @@ function renderPagination(totalPages) {
 
     for (let i = 0; i < totalPages; i++) {
         const pageLink = document.createElement('a');
-        pageLink.classList.add('bg-[#373737]','text-white', 'px-3', 'py-1', 'rounded-md', 'hover:bg-red-500');
+        pageLink.classList.add('bg-[#373737]','text-white', 'px-3', 'py-1', 'rounded-md', 'hover:bg-red-500','cursor-pointer');
         pageLink.textContent = i + 1;
-        pageLink.addEventListener('click', () => searchAllCars(i, pageSize));
+        pageLink.addEventListener('click', () => {
+            currentPage=i+1; searchAllCars(i, pageSize)})
         paginationContainer.appendChild(pageLink);
+        if(i+1===currentPage) pageLink.classList.add('bg-red-500');
     }
+
 }
 
 searchAllCars(page, pageSize);
